@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { ServicesSelector } from "@/components/ServicesSelector";
 import { ProgramHighlights } from "@/components/ProgramHighlights";
@@ -22,6 +23,7 @@ const Index = () => {
       
       {/* Content */}
       <div className="relative z-10">
+        <Navigation />
         <Hero />
         <ServicesSelector />
         <ProgramHighlights />
