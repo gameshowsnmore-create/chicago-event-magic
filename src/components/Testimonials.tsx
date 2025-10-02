@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import hybridEventsLogo from "@/assets/hybrid-events-logo.png";
 
 const testimonials = [
   {
@@ -18,7 +19,8 @@ const testimonials = [
     quote: "Our hybrid event reached over 500 participants globally. The technical execution was flawless.",
     author: "Lisa Rodriguez",
     company: "Global Marketing Solutions",
-    rating: 5
+    rating: 5,
+    logo: hybridEventsLogo
   }
 ];
 
@@ -42,6 +44,17 @@ export const Testimonials = () => {
               className="bg-card/50 backdrop-blur border-2 border-border hover:border-primary transition-all duration-300 hover:scale-105 hover:glow-cyan"
             >
               <CardContent className="pt-6">
+                {/* Logo if available */}
+                {testimonial.logo && (
+                  <div className="flex justify-center mb-4">
+                    <img 
+                      src={testimonial.logo} 
+                      alt={`${testimonial.company} logo`}
+                      className="h-20 w-auto object-contain drop-shadow-lg"
+                    />
+                  </div>
+                )}
+                
                 {/* Star Rating */}
                 <div className="flex gap-1 mb-4 justify-center">
                   {[...Array(testimonial.rating)].map((_, i) => (
