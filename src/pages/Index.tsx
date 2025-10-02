@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Hero } from "@/components/Hero";
+import { ServicesSelector } from "@/components/ServicesSelector";
+import { ProgramHighlights } from "@/components/ProgramHighlights";
+import { Testimonials } from "@/components/Testimonials";
+import { SocialMedia } from "@/components/SocialMedia";
+import { FinalCTA } from "@/components/FinalCTA";
+import backgroundImage from "@/assets/website-bg.png";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <main className="relative min-h-screen">
+      {/* Fixed background */}
+      <div 
+        className="fixed inset-0 z-0 opacity-40"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed"
+        }}
+      />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        <Hero />
+        <ServicesSelector />
+        <ProgramHighlights />
+        <Testimonials />
+        <SocialMedia />
+        <FinalCTA />
       </div>
-    </div>
+    </main>
   );
 };
 
