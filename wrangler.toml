@@ -1,0 +1,12 @@
+name = "Irl-events"
+main = "src/worker.ts"
+compatibility_date = "2025-10-03"
+workers_dev = true
+
+# Serve static files from Vite build output
+assets = { directory = "dist" }
+
+# When ready to map to a real domain, uncomment and edit:
+# routes = [
+#   { pattern = "irlevents.fun*", zone_name = "www.irlevents.fun" }
+# ]
