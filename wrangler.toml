@@ -1,5 +1,5 @@
 name = "Irl-events"
-main = "src/worker.ts"
+main = "./index.html"
 compatibility_date = "2025-10-03"
 workers_dev = true
 
